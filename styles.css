@@ -10,7 +10,7 @@ header {
     padding: 20px 50px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top, #1a1919, #07086d);
+    background: linear-gradient(to top, #b2dad6, #babbb5);
 }
 
 .logotipas {
@@ -29,11 +29,11 @@ ul {
     font-size: 20px;
 }
 
-a {
+.lis {
     color: rgb(255, 251, 0);
     text-decoration: none;
     padding: 5px;
-    background-color: rgba(49, 173, 255, 0.075);
+    background-color: rgba(10, 10, 10, 0.075);
     border-radius: 5px;
 }
 
@@ -45,8 +45,6 @@ a {
     height: 350px;
     width: 100%;
     /* Užima visą ekraną */
-    background-color: #000;
-    /* Galima naudoti, jei fonas yra būtinas */
     overflow: hidden;
     /* Paslėps visus perteklinius elementus */
     animation: baneris 5s infinite;
@@ -89,11 +87,85 @@ a {
     justify-content: center;
     border-radius: 10px;
     color: rgb(224, 221, 24);
+    line-height: normal;
+    padding: 10px;
 
 }
 
+#history {
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+}
+
+.textas {
+    display: flex;
+}
+
+.textbox {
+    background-color: rgba(119, 126, 126, 0.075);
+    border-radius: 3rem;
+    box-shadow: 10px 10px 20px #babbb573;
+    padding: 4rem;
+    padding-top: 10px;
+    margin: 3rem;
+    width: 70%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-indent: 2rem;
+    white-space: pre-wrap;
+    align-items: center;
+    
+}
+
+p {
+    text-align: justify;
+    line-height: 2;
+}
+
+.aside {
+    width: 30%;
+    text-align: center;
+    padding: 2rem 1rem;
+
+}
+
+.ikona {
+    width: 3rem;
+    height: auto;
+    transform: scaleX(-1);
+    justify-items: left;
+    margin: 1rem;
+}
+
+.adress {
+    margin: 2rem 0, 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.pard {
+
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.pard:hover {
+    color: blue;
+}
+
+.minionimg {
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+
+
 .korteles {
     display: flex;
+    flex-wrap: wrap;
     margin: 3rem;
     gap: 10px;
     justify-content: space-between;
@@ -125,8 +197,9 @@ a {
 
 }
 
-.mygtukas{
-    margin-top: 1rem; /* Atstumas nuo vaizdo */
+.mygtukas {
+    margin-top: 1rem;
+    /* Atstumas nuo vaizdo */
     padding: 10px 20px;
     background-color: #ff5722;
     border: none;
@@ -136,8 +209,55 @@ a {
 
 }
 
-.mygtukas:active{
+.mygtukas:active {
     transform: translateY(2px);
+}
+
+footer{
+    background: linear-gradient(to top, #b2dad6, #babbb5);
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#rodykle{
+    width: 5rem;
+    height: auto;
+}
+
+#kietaantis{
+    height: 100%;
+}
+
+#a2dalis{
+    display: flex;
+    justify-content: center;
+}
+
+#footernav{
+    display: flex;
+    align-items: center;
+}
+
+.footerlis {
+    color: rgb(240, 236, 0);
+    text-decoration: none;
+    padding: 5px;
+    background-color: rgba(10, 10, 10, 0.075);
+    border-radius: 5px;
+}
+
+#a3dalis{
+    display: flex;
+    align-items: center;
+    background-color: none;
+}
+
+
+#scrollToTopBtn{
+    background-color: transparent;
+    border: none;
 }
 
 
@@ -193,6 +313,7 @@ a {
 @media (min-width: 992px) and (max-width: 1199px) {
     header {
         padding: 20px 50px;
+
     }
 
     ul {
@@ -208,9 +329,8 @@ a {
 /* Planšetėms (nuo 768px iki 991px pločio) */
 @media (min-width: 768px) and (max-width: 991px) {
     header {
-        flex-direction: column;
         padding: 15px 40px;
-        text-align: center;
+        
     }
 
     ul {
@@ -224,34 +344,114 @@ a {
         height: 2rem;
         margin-bottom: 10px;
         animation: none;
+        margin-bottom: 0;
         /* Animaciją galima išjungti planšetėms */
     }
+
+    .korteles{
+        display: flex;
+        flex-wrap: wrap;
+       gap: 1rem;
+        
+    }
+
+    .divas{
+        flex: 1 1 calc(50% - 20px);
+       justify-content: center;
+    }
+
+    .informacija{
+        display: none;
+    }
 }
+
+
+
+
+
+
+
+
+
 
 /* Mobiliesiems (iki 767px pločio) */
 @media (max-width: 767px) {
     header {
         height: auto;
-        flex-direction: column;
         padding: 10px 20px;
         text-align: center;
+       position: relative;
     }
 
     .logotipas {
         margin-right: 0;
-        margin-bottom: 20px;
+        justify-content: left;
         animation: none;
+        position: absolute;
+        left: 3rem;
+    
         /* Animaciją galima išjungti mobiliesiems */
     }
 
     ul {
+        display: block;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
         font-size: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .informacija{
+        display: none;
     }
 
     a {
         font-size: 18px;
+    }
+    .aside{
+        display: none;
+        left: -300px;
+        
+    }
+
+    .textbox{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .divas{
+        width: 100%;
+    }
+
+    .korteles{
+      
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        height: auto;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    .card{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    section{
+        overflow-x: hidden;
+        max-width: 100%;
+        height: auto;
+    }
+
+    body{
+        overflow-x: hidden;
     }
 }
