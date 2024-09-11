@@ -187,6 +187,7 @@ p {
     border-radius: 10px;
     padding: 10px;
     box-shadow: 10px 10px 20px #8a8686a8;
+    justify-content: center;
 }
 
 .allduck {
@@ -262,6 +263,79 @@ footer{
 
 
 
+.apiemusdivas {
+    display: flex;
+    width: 100%;
+    height: auto;
+    height: 20rem;
+    
+    gap: 10px;
+    border-radius: 10px;
+    padding: 10px;
+   
+    
+    margin: 3rem;
+
+}
+
+.apiemuskorteles {
+    display: flex;
+    flex-direction: column;
+   width: 70rem;
+    margin: 3rem;
+    gap: 10px;
+   
+}
+
+.apieallduck{
+    padding-top: 1rem;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.charakter{
+   display: flex;
+   background-color: rgba(192, 194, 194, 0.589);
+    box-shadow: 10px 10px 20px #8a8686a8;
+}
+
+h3{
+    font-size: 2rem;
+
+    left: 5rem;
+    margin-top: 2rem;
+  
+}
+
+.apieinfo{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   margin-left: 2rem;
+}
+
+#apie, #apie1,#apie2, #apie3{
+    margin-top: 1rem;
+    /* Atstumas nuo vaizdo */
+    padding: 10px 20px;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    height: 2rem;
+}
+
+#apie:active {
+    transform: translateY(2px);
+}
+
+#pasleptas, #pasleptas1, #pasleptas2, #pasleptas3{
+    margin: 3rem;
+    display: none;
+}
+
 
 @keyframes baneris {
     0% {
@@ -324,6 +398,13 @@ footer{
     .logotipas {
         height: 3.5rem;
     }
+
+    .apiemuskorteles{
+        width: fit-content;
+        height: auto;
+        align-items: center;
+
+    }
 }
 
 /* Planšetėms (nuo 768px iki 991px pločio) */
@@ -362,6 +443,13 @@ footer{
 
     .informacija{
         display: none;
+    }
+
+    .apiemuskorteles{
+        width: fit-content;
+        height: auto;
+        align-items: center;
+
     }
 }
 
@@ -446,12 +534,48 @@ footer{
     }
 
     section{
-        overflow-x: hidden;
+        
         max-width: 100%;
         height: auto;
     }
 
     body{
         overflow-x: hidden;
+       
+    }
+
+    footer {
+        height: auto;
+        padding: 10px 20px;
+        text-align: center;
+       position: relative;
+    }
+
+    #kietaantis{
+        height: 100%;
+    }
+
+    #a1dalis{
+        height: 10rem;
+    }
+
+    .apiemusdivas{
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+        height: auto;
+        
+    }
+
+    .apiemuskorteles{
+        width: fit-content;
+        height: auto;
+        align-items: center;
+
+    }
+
+    #footer{
+        justify-content: center;
+        align-items: center;
     }
 }
